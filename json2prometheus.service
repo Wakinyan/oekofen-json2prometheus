@@ -1,0 +1,11 @@
+[Unit]
+Description=oekofen JSON to Prometheus convert
+After=network.target
+
+[Service]
+User='Username to run with'
+WorkingDirectory=/path/to/json2prometheus/file/folder
+ExecStart=/usr/bin/python3 json2prometheus.py
+
+[Install]
+WantedBy=multi-user.target
